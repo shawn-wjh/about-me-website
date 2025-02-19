@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .dropdown {
+        width: 100%;
+        text-align: left;
+        margin: 10px 0;
+      }
+
+      .dropdown-btn {
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        padding: 15px;
+        border: none;
+        text-align: left;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .dropdown-btn:hover {
+        background-color: #5c5d61;
+      }
+
+      .dropdown-content {
+        display: none;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin-left: 20px;
+        text-align: left;
+      }
+
+      .gif-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>About Me</h1>
+
+      <!-- GIF Embed -->
+      <div class="gif-container">
+        <div
+          class="tenor-gif-embed"
+          data-postid="7273814260720971355"
+          data-share-method="host"
+          data-aspect-ratio="1"
+          data-width="50%"
+        ></div>
+      </div>
+      <script
+        type="text/javascript"
+        async
+        src="https://tenor.com/embed.js"
+      ></script>
+
+      <p>Hello! I'm Shawn, Welcome to my page!</p>
+
+      <!-- General Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('general')">
+          General
+        </button>
+        <div class="dropdown-content" id="general">
+          <ul>
+            <li>I am a second year software engineering student</li>
+            <li>Personality type: ENTJ</li>
+            <li>Taken COMP1511, COMP1521, and COMP1531</li>
+            <li>Currently taking SENG2021, and COMP2521</li>
+            <li>
+              At the moment learning python and web development in my free time
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hobbies Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('hobbies')">
+          Hobbies
+        </button>
+        <div class="dropdown-content" id="hobbies">
+          <ul>
+            <li>Bouldering</li>
+            <li>Weight-lifting</li>
+            <li>Cooking</li>
+            <li>Sleeping</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Where I'm From Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('location')">
+          Where I'm From
+        </button>
+        <div class="dropdown-content" id="location">
+          <ul>
+            <li>Originally from Malaysia</li>
+            <li>Moved to NZ when I was young</li>
+            <li>Now I'm here!</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interests Dropdown -->
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown('interest')">
+          Interest
+        </button>
+        <div class="dropdown-content" id="interest">
+          <p>
+            I'm very interested in web development and right now I'm still very
+            much learning. I hope to get the opportunity to learn along side
+            like-minded people and make some friends along the way!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
